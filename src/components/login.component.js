@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
 export default class Login extends Component {
   render() {
     return (
@@ -37,8 +38,10 @@ export default class Login extends Component {
             Submit
           </button>
         </div>
-        <p className="forgot-password text-right">
-          Forgot <a href="#">password?</a>
+        <p className="forgot-password text-right"> 
+          <Link className="nav-link" to={'/forgot-password'}>
+          Forgot Password?
+          </Link>
         </p>
       </form>
     )

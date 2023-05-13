@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
 export default class SignUp extends Component {
   render() {
     return (
@@ -38,7 +39,10 @@ export default class SignUp extends Component {
           </button>
         </div>
         <p className="forgot-password text-right">
-          Already registered <a href="/sign-in">sign in?</a>
+          Already registered 
+          <Link className="nav-link" to={'/sign-in'}>
+            Login
+          </Link>
         </p>
       </form>
     )
